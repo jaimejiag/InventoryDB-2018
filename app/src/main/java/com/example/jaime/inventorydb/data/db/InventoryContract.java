@@ -9,7 +9,7 @@ import java.util.HashMap;
  */
 
 public final class InventoryContract {
-    public static final int DATABASE_VERSION = 16;
+    public static final int DATABASE_VERSION = 18;
     public static final String DATABASE_NAME = "inventory.db";
 
 

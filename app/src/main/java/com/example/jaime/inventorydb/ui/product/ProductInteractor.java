@@ -24,6 +24,6 @@ public class ProductInteractor implements ProductContract.Interactor {
 
     @Override
     public void getProductView(Product product) {
-        mListener.onLoadProductView(ProductRepository.getInstance().getProductView());
+        mListener.onLoadProductView(ProductRepository.getInstance().getProductView(product.get_id()));
     }
 }

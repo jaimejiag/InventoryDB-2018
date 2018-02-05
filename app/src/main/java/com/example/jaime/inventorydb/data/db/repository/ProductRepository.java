@@ -33,8 +33,7 @@ public class ProductRepository {
     }
 
 
-    public ProductView getProductView() {
-        mDao.search(0);
-        return null;
+    public ProductView getProductView(int id) {
+        return mDao.search(id);
     }
 }

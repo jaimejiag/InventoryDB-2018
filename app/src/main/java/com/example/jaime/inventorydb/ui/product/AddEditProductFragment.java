@@ -50,11 +50,10 @@ public class AddEditProductFragment extends Fragment {
         edtSerial = (EditText) view.findViewById(R.id.edt_product_serial);
         edtVendor = (EditText) view.findViewById(R.id.edt_product_seller);
         edtModel = (EditText) view.findViewById(R.id.edit_product_model);
-        txvCategory = (EditText) view.findViewById(R.id.txv_product_category);
-        txvSubcategory = (EditText) view.findViewById(R.id.txv_product_subcategory);
-        txvType = (EditText) view.findViewById(R.id.txv_product_type);
-        txvSector = (EditText) view.findViewById(R.id.txv_product_sector);
-        txvCategory = (EditText) view.findViewById(R.id.txv_product_category);
+        txvCategory = (TextView) view.findViewById(R.id.txv_category_result);
+        txvSubcategory = (TextView) view.findViewById(R.id.txv_subcategory_result);
+        txvType = (TextView) view.findViewById(R.id.txv_type_result);
+        txvSector = (TextView) view.findViewById(R.id.txv_sector_result);
         edtDescription = (EditText) view.findViewById(R.id.editDescription);
         edtPrice = (EditText) view.findViewById(R.id.edt_product_price);
         edtDatePurchase = (EditText) view.findViewById(R.id.edt_product_date);
@@ -81,5 +80,14 @@ public class AddEditProductFragment extends Fragment {
         edtSerial.setText(productView.getSerial());
         edtVendor.setText(productView.getVendor());
         edtModel.setText(productView.getModelCode());
+        txvCategory.setText(productView.getCategoryName());
+        txvSubcategory.setText(productView.getSubcategoryName());
+        txvType.setText(productView.getProductClassDescription());
+        txvSector.setText(productView.getSectorName());
+        edtDescription.setText(productView.getDescription());
+        edtPrice.setText(String.valueOf(productView.getValue()));
+        edtDatePurchase.setText(productView.getDatePurchase());
+        edtUrl.setText(productView.getUrl());
+        edtNote.setText(productView.getNote());
     }
 }

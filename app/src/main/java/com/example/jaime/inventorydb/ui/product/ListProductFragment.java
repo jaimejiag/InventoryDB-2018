@@ -91,7 +91,8 @@ public class ListProductFragment extends Fragment implements ProductContract.Vie
         lvProduct.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                mPresenter.requetsToShowProduct(null);
+                Product product = (Product) parent.getItemAtPosition(position);
+                mPresenter.requetsToShowProduct(product);
             }
         });
         

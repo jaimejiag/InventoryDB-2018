@@ -34,7 +34,7 @@ public class ProductActivity extends AppCompatActivity implements ListProductFra
     public void onShowProduct(Bundle arguments) {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         mAddEditProductFragment = AddEditProductFragment.newInstance(arguments);
-
+        transaction.addToBackStack(null);
         transaction.replace(android.R.id.content, mAddEditProductFragment).commit();
     }
 }
